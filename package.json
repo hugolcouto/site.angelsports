@@ -1,0 +1,10 @@
+{
+  "name": "angelsports_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+		"sass": "node-sass ./assets/src/scss -o ./assets/dist/css -w --output-style compressed",
+		"sync": "browser-sync start --proxy localhost:8080 --files assets/src/scss/**/*.scss ./**/*.php **/*.js"
+	}
+}

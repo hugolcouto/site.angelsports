@@ -1,0 +1,141 @@
+.navbar {
+	background-color: rgba($color-main, 0.9);
+	padding: 14px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+	backdrop-filter: blur(15px);
+
+	@supports not (backdrop-filter: blur(15px)) {
+        background-color: $color-main;
+    }
+		
+	&__content {
+		@extend %container;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__leftcontainer,
+		&__rightcontainer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__leftcontainer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&__logo {
+				margin-right: 20px;
+
+				&:focus {
+					outline: 1px dotted $color-light;
+				}
+
+				> .custom-logo {
+					width: 157px;
+					height: 56px;
+				}
+			}
+
+			&__social {
+				display: flex;
+				align-items: center;
+				
+				> a {
+					text-decoration: none;
+					transition: 0.3s;
+					color: $color-light;
+					@include hover;
+
+					&:nth-of-type(1) {
+						margin-right: 8px;
+					}
+
+					&:nth-last-of-type(1) {
+						margin-right: 14px;
+					}
+				}
+
+				> span {
+					font-size: 0.9rem;
+					line-height: 1.1rem;
+					color: $color-light;
+				}
+			}
+		}
+
+		&__rightcontainer {
+
+			&__search {
+				margin-right: 16px;
+				display: table;
+
+				> button {
+					background-color: transparent;
+					color: $color-light;
+					border: none;
+					cursor: pointer;
+					font-size: 1.2rem;
+					opacity: 1;
+					visibility: visible;
+					transition: $transition;
+					@include hover;
+
+					&.close {
+						transition: $transition;
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+
+				> input[type='search'] {
+					background-color: $color-main;
+					border: 1px solid darken($color-light, 50);
+					appearance: none;
+					padding: 8px 12px;
+					color: $color-light;
+					transition: $transition;
+					width: 0;
+					opacity: 0;
+					visibility: hidden;
+
+					&::placeholder {
+						color: darken($color-light, 50);
+					}
+
+					&.open {
+						width: 300px;
+						opacity: 1;
+						visibility: visible;
+					}
+					
+					&:focus {
+						background-color: lighten($color-main, 10);
+						border-color: $color-light;
+						outline: 0;
+						transition: $transition;
+					}
+				}
+			}
+
+			&__menu {
+
+				> a {
+					color: $color-light;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 1rem;
+					line-height: 1.3rem;
+					margin-right: 8px;
+					@include hover;
+				} 
+			}
+		}
+	}
+}

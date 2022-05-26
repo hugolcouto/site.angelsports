@@ -1,0 +1,15 @@
+// Tokens
+@import './tokens/palette';
+@import './tokens/breakpoints';
+@import './tokens/container';
+@import './tokens/mixins';
+@import './tokens/general';
+
+// Components
+@import './components/navbar';
+@import './components/footer';
+
+// Home
+@import './components/customers-carousel';
+@import './components/testimonial';
+@import './components/sponsors';

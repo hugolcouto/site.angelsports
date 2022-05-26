@@ -1,0 +1,27 @@
+$transition: 0.3s;
+@mixin hover {
+	opacity: 1;
+	transition: $transition;
+
+	&:hover {
+		opacity: 0.6;
+		transition: $transition;
+	}
+}
+
+@mixin focus {
+	&:focus {
+		outline: 1px dotted $color-light;
+	}
+}
+
+$glass-effect: blur(5px);
+$default-transition: 0.3s;
+@mixin glass($opacity: 0.7) {
+    background-color: rgba($color-dark, $opacity);
+    backdrop-filter: $glass-effect;
+
+	@supports not (backdrop-filter: $glass-effect) {
+        background-color: $color-main;
+    }
+}
