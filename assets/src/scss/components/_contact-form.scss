@@ -1,0 +1,31 @@
+$form-max-width: 600px;
+
+.wpcf7-response-output {
+    max-width: $form-max-width;
+    margin: 0 auto !important;
+    margin-top: 16px !important;
+}
+
+.contact-form {
+    max-width: $form-max-width;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 16px;
+
+    & .form-label {
+        color: $color-main;
+        text-transform: uppercase;
+    }
+
+    > input[type="submit"] {
+        margin: 0;
+        font-size: 1em;
+        color: #ffffff;
+        text-transform: uppercase;
+        background-color: $color-main;
+        padding: 10px 15px;
+        border: none;
+    }
+}

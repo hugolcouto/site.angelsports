@@ -1,0 +1,35 @@
+%inputstyle {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid $color-main;
+    @include focus;
+    color: $color-main;
+
+    &::placeholder {
+        color: lighten($color-dark, 50);
+    }
+}
+
+.input {
+    $inputTypes: 
+        'text', 
+        'password',
+        'search',
+        'tel',
+        'email';
+
+    @each $type in $inputTypes {
+        &[type="#{$type}"] {
+            @extend %inputstyle;
+        }
+    }
+}
+
+textarea {
+    @extend %inputstyle;
+    resize: none;
+} 
+
+.form-input {
+    @extend %inputstyle;
+}

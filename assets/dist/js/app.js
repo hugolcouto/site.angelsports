@@ -35,8 +35,10 @@ $(document).ready(function () {
 
 	function homeCustomerCarousel() {
 		$('#home-customer-carousel').slick({
-			infinite: false,
+			infinite: true,
 			dots: true,
+			autoplay: true,
+			autoplaySpeed: 6000,
 			slidesToShow: 4,
 			slidesToScroll: 4,
 			prevArrow: '#home-customer-prev',

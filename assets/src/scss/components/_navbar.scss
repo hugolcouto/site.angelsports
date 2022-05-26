@@ -134,6 +134,10 @@
 					line-height: 1.3rem;
 					margin-right: 8px;
 					@include hover;
+
+					&[aria-current="page"] {
+						color: darken($color-light, 50);
+					}
 				} 
 			}
 		}

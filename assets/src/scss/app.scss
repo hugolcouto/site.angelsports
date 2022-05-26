@@ -8,8 +8,18 @@
 // Components
 @import './components/navbar';
 @import './components/footer';
+@import './components/section-heading';
+@import './components/input';
 
 // Home
 @import './components/customers-carousel';
 @import './components/testimonial';
 @import './components/sponsors';
+
+// Clientes
+@import './components/customers-list'; 
+@import './components/categories-list';
+
+// Páginas
+@import './components/page';
+@import './components/contact-form';

@@ -1,0 +1,41 @@
+.categories-list {
+    @extend %container;
+    border: 1px solid $color-main;
+    background-color: $color-light;
+    @include shadow;
+    margin-bottom: 120px;
+    display: block;
+    padding: 90px 20px;
+
+    > h4 {
+        color: $color-main;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+    }
+
+    > form {
+        margin: 16px 0;
+
+        > input[type="search"] {
+            width: 100%;
+        }
+    }
+
+    > ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+
+        > li {
+
+            > a {
+                text-decoration: none;
+                color: $color-main;
+                text-transform: uppercase;
+                @include hover;
+            }
+        }
+    }
+}
