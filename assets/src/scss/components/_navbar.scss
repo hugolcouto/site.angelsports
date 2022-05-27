@@ -7,9 +7,10 @@
 	width: 100%;
 	z-index: 4;
 	backdrop-filter: blur(15px);
+	@include shadow;
 
 	@supports not (backdrop-filter: blur(15px)) {
-        background-color: $color-main;
+        background-color: lighten($color-main, 10);
     }
 		
 	&__content {
@@ -40,6 +41,7 @@
 				> .custom-logo {
 					width: 157px;
 					height: 56px;
+					display: block;
 				}
 			}
 

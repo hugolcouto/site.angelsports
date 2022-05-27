@@ -24,6 +24,7 @@ function add_scripts()
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', '//unpkg.com/jquery');
 	wp_enqueue_script('slick', '//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', ['jquery'], null, true);
+	wp_enqueue_script('mask', get_template_directory_uri() . "/assets/dist/js/jquery.mask.min.js", ['jquery'], null, true);
 	wp_enqueue_script('app', get_template_directory_uri() . "/assets/dist/js/app.js", ['jquery'], $js_ver_hash, true);
 
 	// CSS

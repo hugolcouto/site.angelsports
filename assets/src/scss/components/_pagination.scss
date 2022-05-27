@@ -1,0 +1,26 @@
+.custom-pagination {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .page-numbers {
+        $size: 40px;
+        width: $size;
+        height: $size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $color-main;
+        background-color: $color-light;
+        color: $color-main;
+        text-decoration: none;
+        margin: 0 10px;
+        @include shadow;
+
+        &.current {
+            background-color: $color-main;
+            color: $color-light;
+        }
+    }
+}
