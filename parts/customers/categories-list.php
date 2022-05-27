@@ -1,15 +1,14 @@
 <section class="categories-list">
-    <h4>Categorias</h4>
+	<h4>Categorias</h4>
 
-    <form action="">
-        <input class="input" type="text" name="" id="" placeholder="Quem está procurando?">
-    </form>
+	<form action="">
+		<input class="input" type="text" name="s" id="" placeholder="Quem está procurando?">
+	</form>
 
-    <ul>
-        <?php for($i=0;$i<=9;$i++): ?>
-            <li>
-                <a href="">Categoria</a>
-            </li>
-        <?php endfor; ?>
-    </ul>
+	<ul>
+		<?php wp_list_cats([
+			'show_count' => true,
+			'hide_empty' => false
+		]); ?>
+	</ul>
 </section>

@@ -5,11 +5,21 @@
     &__content {
         @extend %container;
 
-        > h1 {
+		> h1,
+		> h2 {
             color: $color-light;
             text-align: center;
             text-transform: uppercase;
             font-size: 2.5rem;
+        }
+
+        > h1 {
+            font-size: 2.5rem;
+        }
+
+		> h2 {
+			margin-top: 12px;
+            font-size: 1.4rem;
         }
     }
 }

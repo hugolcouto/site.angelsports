@@ -28,7 +28,12 @@ $(document).ready(function () {
 				$('#input-search').removeClass('open')
 				$('#open-search-input').removeClass('close')
 			}
-		});
+
+			if (event.key == "Enter") {
+				// alert('Pesquisa feita')
+				$('.navbar__content__rightcontainer__search').submit()
+			}
+		})
 
 	}
 	openSearchInput()

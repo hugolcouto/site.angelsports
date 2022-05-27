@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="navbar__content__rightcontainer">
-			<form action="" class="navbar__content__rightcontainer__search">
+			<form class="navbar__content__rightcontainer__search">
 				<button id="open-search-input" title="Busca">
 					<i class="fa fa-search"></i>
 				</button>

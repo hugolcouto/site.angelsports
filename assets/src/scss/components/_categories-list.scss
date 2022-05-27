@@ -3,9 +3,11 @@
     border: 1px solid $color-main;
     background-color: $color-light;
     @include shadow;
-    margin-bottom: 120px;
     display: block;
-    padding: 90px 20px;
+    padding: 90px 60px;
+	max-width: 900px;
+	margin: 0 auto;
+    margin-bottom: 120px;
 
     > h4 {
         color: $color-main;
@@ -25,16 +27,19 @@
     > ul {
         list-style: none;
         display: grid;
+		grid-gap: 6px;
         grid-template-columns: repeat(4, 1fr);
 
 
         > li {
+			font-size: 0.8rem;
+			@include hover;
+			color: $color-main;
 
             > a {
                 text-decoration: none;
-                color: $color-main;
                 text-transform: uppercase;
-                @include hover;
+				color: $color-main;
             }
         }
     }

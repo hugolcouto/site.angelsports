@@ -2,8 +2,14 @@
     width: 100%;
     padding: 10px 15px;
     border: 1px solid $color-main;
-    @include focus;
     color: $color-main;
+	transition: $transition;
+
+	&:focus {
+		border-color: lighten($color-main, 50);
+		transition: $transition;
+		outline: none;
+	}
 
     &::placeholder {
         color: lighten($color-dark, 50);

@@ -27,5 +27,19 @@ $form-max-width: 600px;
         background-color: $color-main;
         padding: 10px 15px;
         border: none;
+		@include shadow;
+		transition: $transition;
+		cursor: pointer;
+
+		&:focus {
+			outline: 1px dotted $color-main;
+			background-color: lighten($color-main, 5);
+			transition: $transition;
+		}
+
+		&:hover {
+			background-color: lighten($color-main, 10);
+			transition: $transition;
+		}
     }
 }
